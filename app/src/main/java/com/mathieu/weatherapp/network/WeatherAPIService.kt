@@ -1,11 +1,11 @@
-package com.mathieu.weatherapp.data.remote
+package com.mathieu.weatherapp.network
 
-import com.mathieu.weatherapp.data.remote.responses.Forecast
-import com.mathieu.weatherapp.data.remote.responses.Weather
+import com.mathieu.weatherapp.model.Forecast
+import com.mathieu.weatherapp.model.Weather
 import retrofit2.http.GET
 import retrofit2.http.Query
 
-interface WeatherAPI {
+interface WeatherAPIService {
   @GET("current")
   suspend fun getCurrentWeather(
     // api key

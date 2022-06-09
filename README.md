@@ -9,4 +9,5 @@ Based on that design:
 - [x] MVVM Architecture
 - [x] HTTP Request with `Retrofit`: https://square.github.io/retrofit/
 - [x] JSON with `Gson`: https://github.com/google/gson    
-- [x] Dependency injection with `Hilt`: https://dagger.dev/hilt/
+- [x] Dependency injection with `Hilt`: https://dagger.dev/hilt/   
+- [x] Icons with `Font Awesome Compose`: https://github.com/Gurupreet/FontAwesomeCompose

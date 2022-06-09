@@ -1,6 +1,6 @@
 package com.mathieu.weatherapp.di
 
-import com.mathieu.weatherapp.data.remote.WeatherAPI
+import com.mathieu.weatherapp.network.WeatherAPIService
 import com.mathieu.weatherapp.repository.WeatherRepository
 import com.mathieu.weatherapp.util.Constants.API_URL
 import dagger.Module
@@ -20,16 +20,16 @@ object AppModule {
   @Singleton
   @Provides
   fun providesWeatherRepository(
-    api: WeatherAPI
+    api: WeatherAPIService
   ) = WeatherRepository(api)
 
   @Singleton
   @Provides
-  fun providesWeatherAPI(): WeatherAPI {
+  fun providesWeatherAPI(): WeatherAPIService {
     return Retrofit.Builder()
       .addConverterFactory(GsonConverterFactory.create())
       .baseUrl(API_URL)
       .build()
-      .create(WeatherAPI::class.java)
+      .create(WeatherAPIService::class.java)
   }
 }

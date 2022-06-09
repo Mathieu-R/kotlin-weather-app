@@ -1,4 +1,4 @@
-package com.mathieu.weatherapp.data.remote.responses
+package com.mathieu.weatherapp.model
 
 data class Astro(
     val moon_illumination: String,

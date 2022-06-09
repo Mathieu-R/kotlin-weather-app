@@ -1,8 +1,8 @@
 package com.mathieu.weatherapp.repository
 
-import com.mathieu.weatherapp.data.remote.WeatherAPI
-import com.mathieu.weatherapp.data.remote.responses.Forecast
-import com.mathieu.weatherapp.data.remote.responses.Weather
+import com.mathieu.weatherapp.network.WeatherAPIService
+import com.mathieu.weatherapp.model.Forecast
+import com.mathieu.weatherapp.model.Weather
 import com.mathieu.weatherapp.util.Resource
 import dagger.hilt.android.scopes.ActivityScoped
 import javax.inject.Inject
@@ -10,7 +10,7 @@ import javax.inject.Inject
 // annotation to make sure our repository live as long as our "Activity" does
 @ActivityScoped
 class WeatherRepository @Inject constructor(
-  private val api: WeatherAPI
+  private val api: WeatherAPIService
 ) {
   suspend fun getCurrentWeather(key: String, locality: String, airQuality: String): Resource<Weather> {
     val response = try {
