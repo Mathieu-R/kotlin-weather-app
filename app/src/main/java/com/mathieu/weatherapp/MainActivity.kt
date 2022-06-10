@@ -23,7 +23,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.mathieu.weatherapp.ui.home.HomeScreen
 import com.mathieu.weatherapp.ui.theme.WeatherAppTheme
-import com.mathieu.weatherapp.ui.theme.primaryBackground
 import dagger.hilt.android.AndroidEntryPoint
 
 // tell dagger-hilt we want to inject something in the Activity

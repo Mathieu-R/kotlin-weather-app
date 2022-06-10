@@ -4,7 +4,6 @@ import android.graphics.drawable.Icon
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.layout.BoxScopeInstance.align
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material.MaterialTheme
@@ -33,7 +32,7 @@ fun HomeScreen(
 
     item { DayForecast() }
 
-    item { WeekForecast }
+    item { WeekForecast() }
   }
 }
 
@@ -75,7 +74,7 @@ fun AdditionalWeatherInformations() {
   ) {
     // humidity
     Box() {
-      Icon(),
+      //Icon(),
       Text(
         text = "13%"
       )
@@ -102,8 +101,8 @@ fun DayForecast() {
       modifier = Modifier.padding(horizontal = 8.dp)
     ) {
       Text(
-        text = "Today",
-        style = MaterialTheme.colors.onSurface
+        text = "Today"
+        //style = MaterialTheme.colors.onSurface
       )
     }
 
